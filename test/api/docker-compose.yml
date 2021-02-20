@@ -1,0 +1,10 @@
+version: '3'
+services:
+  bohr:
+    build: .
+    command: --network devnet --password=""
+    ports:
+      - "5391:5391"
+    volumes:
+      - ./bohr.properties:/bohr/config/bohr.properties
+      - ./wallet.data:/bohr/wallet.data:rw
